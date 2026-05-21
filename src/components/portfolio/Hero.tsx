@@ -68,13 +68,22 @@ export function Hero() {
           </h1>
 
           <div className="font-mono text-sm md:text-base text-muted-foreground mb-8 tracking-wide">
-            Software Engineer &nbsp;/&nbsp; Full-Stack Developer &nbsp;/&nbsp; AI &amp; Workflow Systems
+            Associate Software Engineer &nbsp;/&nbsp; Full-Stack &nbsp;/&nbsp; AI &amp; Workflow Systems
           </div>
 
-          <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-2xl mb-12">
-            I build modern software systems, AI-driven applications, and workflow-focused
-            digital experiences that combine technical precision with intuitive design.
+          <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-2xl mb-8">
+            I build full-stack web apps, AI-integrated tools, and workflow systems —
+            React &amp; Node on the frontend, Python &amp; SQL behind the data, deployed
+            on modern edge infrastructure.
           </p>
+
+          <div className="flex flex-wrap gap-2 mb-10 font-mono text-[11px] text-muted-foreground">
+            {["React", "TypeScript", "Node.js", "Python", "SQL", "OpenAI", "Power BI"].map((t) => (
+              <span key={t} className="rounded-full border border-border bg-card/40 px-3 py-1">
+                {t}
+              </span>
+            ))}
+          </div>
 
           <div className="flex flex-wrap items-center gap-3">
             <a
