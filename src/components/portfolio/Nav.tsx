@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Github } from "lucide-react";
 
 const links = [
   { href: "#top", label: "Home", id: "top" },
   { href: "#about", label: "About", id: "about" },
   { href: "#work", label: "Work", id: "work" },
-  { href: "#stack", label: "Skills", id: "stack" },
+  { href: "#systems", label: "Systems", id: "systems" },
+  { href: "#stack", label: "Stack", id: "stack" },
   { href: "#resume", label: "Resume", id: "resume" },
   { href: "#contact", label: "Contact", id: "contact" },
 ];
@@ -81,6 +82,15 @@ export function Nav() {
           </nav>
 
           <div className="flex items-center gap-2">
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+              className="hidden sm:inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary/40 transition-all"
+            >
+              <Github className="h-4 w-4" />
+            </a>
             <a
               href="#contact"
               className="hidden sm:inline-flex items-center gap-2 text-xs font-medium tracking-wide uppercase rounded-full border border-primary/30 bg-primary/10 text-primary px-4 py-2 hover:bg-primary hover:text-primary-foreground transition-all"
