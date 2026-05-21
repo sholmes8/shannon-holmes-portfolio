@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import { Section } from "./Section";
-import { Link } from "@tanstack/react-router";
 
 type Tech = {
   name: string;
