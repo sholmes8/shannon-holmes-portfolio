@@ -11,22 +11,22 @@ interface Props {
 
 export function Section({ id, eyebrow, title, description, children }: Props) {
   return (
-    <section id={id} className="relative py-32">
-      <div className="container mx-auto px-6">
+    <section id={id} className="relative py-20 md:py-32">
+      <div className="container mx-auto px-5 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mb-16"
+          className="max-w-3xl mb-12 md:mb-16"
         >
-          <div className="flex items-center gap-3 mb-6">
+          <div className="flex items-center gap-3 mb-5 md:mb-6">
             <span className="h-px w-10 bg-primary/60" />
             <span className="font-mono text-xs uppercase tracking-[0.25em] text-primary">
               {eyebrow}
             </span>
           </div>
-          <h2 className="font-display text-5xl md:text-7xl leading-[1.05] tracking-tight">
+          <h2 className="font-display text-4xl sm:text-5xl md:text-7xl leading-[1.05] tracking-tight">
             {title}
           </h2>
           {description && (
