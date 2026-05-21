@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
-import { Link } from "@tanstack/react-router";
 
 const links = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
-  { to: "/work", label: "Work" },
-  { to: "/resume", label: "Resume" },
-  { to: "/contact", label: "Contact" },
-] as const;
+  { href: "#about", label: "About" },
+  { href: "#work", label: "Work" },
+  { href: "#stack", label: "Stack" },
+  { href: "#experience", label: "Experience" },
+  { href: "#contact", label: "Contact" },
+];
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,31 +29,29 @@ export function Nav() {
             scrolled ? "glass-strong shadow-card" : ""
           }`}
         >
-          <Link to="/" className="flex items-center gap-2 group">
+          <a href="#top" className="flex items-center gap-2 group">
             <span className="h-2 w-2 rounded-full bg-primary shadow-amber" />
             <span className="font-display text-xl tracking-tight">
               Shannon <span className="text-gradient">Holmes</span>
             </span>
-          </Link>
+          </a>
           <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             {links.map((l) => (
-              <Link
-                key={l.to}
-                to={l.to}
-                activeOptions={{ exact: true }}
-                activeProps={{ className: "text-foreground" }}
-                className="hover:text-foreground transition-colors relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-primary hover:after:w-full after:transition-all data-[status=active]:after:w-full"
+              <a
+                key={l.href}
+                href={l.href}
+                className="hover:text-foreground transition-colors relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-primary hover:after:w-full after:transition-all"
               >
                 {l.label}
-              </Link>
+              </a>
             ))}
           </nav>
-          <Link
-            to="/contact"
+          <a
+            href="#contact"
             className="hidden sm:inline-flex items-center gap-2 text-xs font-medium tracking-wide uppercase rounded-full border border-primary/30 bg-primary/10 text-primary px-4 py-2 hover:bg-primary hover:text-primary-foreground transition-all"
           >
             Get in touch
-          </Link>
+          </a>
         </div>
       </div>
     </header>
