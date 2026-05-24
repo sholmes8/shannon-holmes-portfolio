@@ -62,13 +62,13 @@ const projects: Project[] = [
     title: "Business Filing Workflow System",
     tag: "Enterprise · Workflow",
     summary:
-      "Workflow-oriented compliance and filing management system modeled on real enterprise operations — built around throughput, audit trails, and SLA visibility.",
+      "Workflow-oriented compliance and filing management system modeled on enterprise operations — designed to align software with how filing teams actually operate (throughput, SLAs, and audits).",
     problem:
-      "Compliance teams juggle filings across spreadsheets and email, losing audit trails and missing SLA windows.",
+      "Compliance teams manage filings across spreadsheets, email, and ad-hoc tools, which fragments work, hides risk, and breaks auditability.",
     solution:
-      "Stage-based pipeline backed by a normalized PostgreSQL schema. Role-based REST endpoints write to an append-only audit log; a Recharts dashboard surfaces SLA risk in real time.",
+      "A stage-based operational pipeline modeled in software: normalized Postgres schema, role-based REST endpoints, and an append-only audit log. The UI provides SLA visibility and exception workflows so operators focus on high-value decisions.",
     impact:
-      "Centralizes pipeline visibility, surfaces SLA risk early, and produces an auditable record by default.",
+      "Improves operational throughput, reduces missed SLAs, and creates an auditable source of truth — demonstrating applied systems thinking and workflow-driven software design.",
     frontend: ["React", "TypeScript", "Recharts"],
     backend: ["Node.js", "Express", "REST"],
     data: ["PostgreSQL", "Audit log table"],
@@ -171,24 +171,29 @@ const stackRows = [
 export function Projects() {
   return (
     <Section
-      id="work"
-      eyebrow="Engineering Case Studies"
-      title={<>Shipped systems, not <span className="text-gradient italic">school projects.</span></>}
-      description="Each project below is scoped like a real product — problem, architecture, stack, and impact. Built with the same rigor I'd bring to associate-level engineering work."
+      id="projects"
+      eyebrow="Technical Case Studies"
+      title={
+        <>
+          <span className="block leading-[1.05]">Built systems, not</span>
+          <span className="block text-gradient italic leading-[1.05]">just assignments.</span>
+        </>
+      }
+      description="Each project below is scoped like a real product — problem, solution, technical stack, and outcome. Projects integrate systems-thinking, operational workflows, analytics, and applied AI alongside production-minded software practices."
     >
       <div className="space-y-28 md:space-y-36">
         {projects.map((p, i) => (
           <motion.article
             key={p.title}
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.65, delay: i * 0.06 }}
             className="grid lg:grid-cols-12 gap-8 lg:gap-12"
           >
             {/* LEFT — Visual + Architecture */}
             <div className={`lg:col-span-7 space-y-5 ${i % 2 === 1 ? "lg:order-2" : ""}`}>
-              <div className="group relative overflow-hidden rounded-2xl border border-border shadow-card">
+              <div className="group relative overflow-hidden rounded-2xl border border-border shadow-card transition-transform duration-300 hover:-translate-y-1 hover:shadow-amber">
                 <div className="absolute top-0 inset-x-0 z-20 flex items-center gap-2 px-4 py-2.5 bg-background/70 backdrop-blur-md border-b border-border/60">
                   <span className="h-2.5 w-2.5 rounded-full bg-destructive/70" />
                   <span className="h-2.5 w-2.5 rounded-full bg-primary/70" />
@@ -246,12 +251,8 @@ export function Projects() {
 
             {/* RIGHT — Narrative + Stack breakdown */}
             <div className={`lg:col-span-5 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
-              <div className="font-mono text-xs text-primary mb-3">
-                CASE STUDY — {p.index} / 04
-              </div>
-              <h3 className="font-display text-4xl md:text-5xl leading-tight mb-4">
-                {p.title}
-              </h3>
+              <div className="font-mono text-xs text-primary mb-3">CASE STUDY — {p.index} / 04</div>
+              <h3 className="font-display text-4xl md:text-5xl leading-[1.05] mb-4">{p.title}</h3>
               <p className="text-muted-foreground leading-relaxed mb-6">{p.summary}</p>
 
               {/* Problem / Solution / Impact */}
@@ -260,18 +261,29 @@ export function Projects() {
                   { k: "Problem", v: p.problem },
                   { k: "Solution", v: p.solution },
                   { k: "Impact", v: p.impact },
-                ].map((b) => (
-                  <div key={b.k} className="rounded-xl border border-border/60 bg-card/30 p-4">
-                    <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary mb-1.5">
-                      {b.k}
-                    </div>
+                ].map((b, idxB) => (
+                  <motion.div
+                    key={b.k}
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.55, delay: i * 0.06 + idxB * 0.04 }}
+                    className="rounded-xl border border-border/60 bg-card/30 p-4 transition-transform duration-300 group hover:-translate-y-0.5"
+                  >
+                    <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary mb-1.5">{b.k}</div>
                     <p className="text-xs text-foreground/85 leading-relaxed">{b.v}</p>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
 
               {/* Stack breakdown */}
-              <div className="rounded-xl border border-border/60 bg-card/20 p-4 mb-6">
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.55, delay: i * 0.06 + 0.12 }}
+                className="rounded-xl border border-border/60 bg-card/20 p-4 mb-6"
+              >
                 <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-3">
                   Technical Stack
                 </div>
@@ -297,18 +309,23 @@ export function Projects() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
 
               {/* Key features */}
-              <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-2">
-                Key Engineering
-              </div>
+              <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-2">Key Engineering</div>
               <ul className="space-y-2 mb-6">
-                {p.features.map((h) => (
-                  <li key={h} className="flex gap-3 text-sm text-foreground/80">
+                {p.features.map((h, fi) => (
+                  <motion.li
+                    key={h}
+                    initial={{ opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.45, delay: i * 0.06 + fi * 0.03 }}
+                    className="flex gap-3 text-sm text-foreground/80"
+                  >
                     <span className="mt-2 h-1 w-1 rounded-full bg-primary shrink-0" />
                     {h}
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
 

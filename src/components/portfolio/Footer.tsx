@@ -17,7 +17,7 @@ export function Footer() {
             Shannon <span className="text-gradient">Holmes</span>
           </span>
           <span className="font-mono text-xs text-muted-foreground ml-4">
-            © {new Date().getFullYear()} · Designed &amp; engineered in React.
+            © {new Date().getFullYear()} · Built with React & systems thinking.
           </span>
         </div>
         <div className="flex items-center gap-2">

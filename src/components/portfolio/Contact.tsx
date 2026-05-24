@@ -19,10 +19,10 @@ export function Contact() {
 
   return (
     <Section
-      id="contact"
-      eyebrow="Contact"
-      title={<>Let's build something <span className="text-gradient italic">worth shipping.</span></>}
-      description="Recruiters, hiring managers, and founders — I'm actively interviewing for Associate Software Engineer and Full-Stack roles. Reach me directly below or through any channel that suits you."
+      id="connect"
+      eyebrow="Connect"
+      title={<>Let's build <span className="text-gradient italic">meaningful systems.</span></>}
+      description="Open to software development, data analytics, AI systems, and graduate-level opportunities. Reach out for technical collaboration, product roles, or project discussions."
     >
       <div className="grid lg:grid-cols-5 gap-8">
         <motion.form
@@ -50,7 +50,7 @@ export function Contact() {
             <div className="grid sm:grid-cols-2 gap-5">
               {[
                 { name: "name", label: "Name", type: "text", placeholder: "Your full name" },
-                { name: "email", label: "Email", type: "email", placeholder: "you@company.com" },
+                { name: "email", label: "Email", type: "email", placeholder: "name@company.com" },
               ].map((f) => (
                 <div key={f.name}>
                   <label className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground">
@@ -73,7 +73,7 @@ export function Contact() {
               <input
                 name="company"
                 type="text"
-                placeholder="Acme · Associate Software Engineer"
+                placeholder="Acme · Software / Data / AI role"
                 className="mt-2 w-full bg-transparent border-b border-border focus:border-primary outline-none py-3 text-foreground placeholder:text-muted-foreground/50 transition-colors"
               />
             </div>
@@ -85,7 +85,7 @@ export function Contact() {
                 required
                 name="message"
                 rows={5}
-                placeholder="A few lines about the role, team, or project…"
+                placeholder="Tell me about the role, team, project, or opportunity…"
                 className="mt-2 w-full bg-transparent border-b border-border focus:border-primary outline-none py-3 text-foreground placeholder:text-muted-foreground/50 transition-colors resize-none"
               />
             </div>
@@ -119,8 +119,7 @@ export function Contact() {
             </div>
             <p className="text-foreground/85 text-sm leading-relaxed">
               <span className="inline-block h-2 w-2 rounded-full bg-primary mr-2 animate-pulse" />
-              Open to <strong className="text-foreground">Associate Software Engineer</strong> and{" "}
-              <strong className="text-foreground">Full-Stack Developer</strong> roles.
+              Open to software development, data analytics, AI systems, and graduate opportunities.
             </p>
             <div className="mt-4 grid grid-cols-2 gap-2 font-mono text-[10px]">
               <div className="rounded-md border border-border/50 bg-background/30 px-3 py-2">
@@ -137,7 +136,7 @@ export function Contact() {
           <div className="glass rounded-2xl p-2">
             {[
               { icon: Mail, label: "Email", value: "hello@shannonholmes.dev", href: "mailto:hello@shannonholmes.dev" },
-              { icon: Linkedin, label: "LinkedIn", value: "/in/shannonholmes", href: "https://linkedin.com" },
+              { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/shannonholmes", href: "https://linkedin.com" },
               { icon: Github, label: "GitHub", value: "@shannonholmes", href: "https://github.com" },
               { icon: FileText, label: "Resume", value: "Download PDF", href: "/resume.pdf" },
             ].map((c) => (

@@ -58,7 +58,7 @@ export function Hero() {
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/40 backdrop-blur px-4 py-1.5 text-xs font-mono text-muted-foreground mb-8">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-            Available for Associate / Full-Stack roles · 2026
+            Available for Software Development, Systems, & Data Roles · 2026
           </div>
 
           <h1 className="font-display text-6xl md:text-8xl lg:text-9xl leading-[0.95] tracking-tight mb-6">
@@ -68,17 +68,19 @@ export function Hero() {
           </h1>
 
           <div className="font-mono text-sm md:text-base text-muted-foreground mb-8 tracking-wide">
-            Associate Software Engineer &nbsp;/&nbsp; Full-Stack &nbsp;/&nbsp; AI &amp; Workflow Systems
+            Software Developer &nbsp;/&nbsp; Systems Builder &nbsp;/&nbsp; Data Analytics
           </div>
 
           <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-2xl mb-8">
-            I build full-stack web apps, AI-integrated tools, and workflow systems —
+            Software developer and systems-focused builder creating modern digital experiences and data-driven solutions through full-stack applications,
+            workflow systems, analytics,  and applied AI.
+            Focused on building structured, scalable software designed around real-world operations and user needs.
             React &amp; Node on the frontend, Python &amp; SQL behind the data, deployed
             on modern edge infrastructure.
           </p>
 
           <div className="flex flex-wrap gap-2 mb-10 font-mono text-[11px] text-muted-foreground">
-            {["React", "TypeScript", "Node.js", "Python", "SQL", "OpenAI", "Power BI"].map((t) => (
+            {["React", "JavaScript", "Node.js", "SQL", "Python", "Power BI", "Excel", "GitHub", "System Documentation"].map((t) => (
               <span key={t} className="rounded-full border border-border bg-card/40 px-3 py-1">
                 {t}
               </span>
@@ -87,7 +89,7 @@ export function Hero() {
 
           <div className="flex flex-wrap items-center gap-3">
             <a
-              href="#work"
+              href="#projects"
               className="group inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-medium hover:shadow-amber transition-all"
             >
               View Projects

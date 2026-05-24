@@ -1,102 +1,200 @@
-import { motion } from "motion/react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import { Section } from "./Section";
 
 const timeline = [
   {
-    period: "2024 — Present",
+    period: "Oct' 2025 — Present",
     role: "Operations & Workflow Coordinator",
-    org: "Cogency Global · Enterprise Compliance Services",
+    org: "Cogency Global Inc. · Enterprise Compliance Services",
     body:
-      "Embedded inside a high-volume, regulated enterprise environment that processes thousands of corporate filings and compliance workflows. I coordinate cross-team operations across deadline-driven SLAs — the same surface area enterprise workflow software is built for.",
+      "Embedded inside a high-volume, regulated corporate compliance environment supporting filings, workflow coordination, and regulated business operations.",
     bullets: [
       "Manage high-volume document and compliance workflows across multiple jurisdictions.",
-      "Coordinate cross-functional operations between client, legal, and processing teams.",
-      "Identify process gaps and translate them into structured workflow improvements.",
+      "Validate structured filing data and identify operational discrepancies through data analysis and cross-team coordination.",
       "Operate inside the kind of regulated, auditable environment SaaS workflow tools serve.",
     ],
-    tags: ["Workflow Ops", "Compliance Systems", "Process Design", "Cross-team Coord."],
+    tags: ["Workflow Systems", "Compliance Ops", "Process Analysis", "Operations"],
   },
   {
-    period: "2023 — 2024",
-    role: "Independent Software & Data Engineering",
-    org: "Self-Directed Projects",
+    period: "Apr' 2025 — Dec' 2025",
+    role: "Front Desk Associate",
+    org: "Reston Radiology Consultants · Medical Imaging",
     body:
-      "Shipped a portfolio of full-stack, AI-integrated, and data-driven builds — each scoped like a real product: defined problem, modeled architecture, deployed to production.",
+      "Supported healthcare workflow operations through EMR systems, scheduling coordination, insurance validation, and patient data management.",
     bullets: [
-      "STYLZ Career AI — React/Node + OpenAI, deployed end-to-end.",
-      "Business Filing Workflow System — modeled on enterprise compliance ops.",
-      "EHR Migration & Analytics — Python ETL + Power BI dashboards.",
-      "STEMSync — mobile mentorship platform (Java/Android + Firebase).",
+      "Maintained secure patient scheduling and healthcare documentation workflows.",
+      "Verified insurance and managed EMR-based patient data with a focus on accuracy and compliance.",
+      "Improved operational efficiency through organized clinical coordination.",
     ],
-    tags: ["Full-Stack", "AI Integration", "ETL & Analytics", "Mobile"],
+    tags: ["Healthcare Systems", "EMR", "Workflow Ops", "Data Accuracy"],
   },
   {
-    period: "2020 — 2024",
+    period: "May 2022 — Sep 2022",
+    role: "Customer Service Representative",
+    org: "Avis Budget Group",
+    body:
+      "Supported customer operations using enterprise reservation systems, workflow coordination, and service-focused problem solving.",
+    bullets: [
+      "Operated reservation and customer database systems in a fast-paced environment.",
+      "Maintained accurate customer records and transaction workflows.",
+      "Resolved operational and customer service issues efficiently.",
+    ],
+    tags: ["Operations", "Customer Systems", "Workflow", "Service"],
+  },
+  {
+    period: "Jan 2021 — May 2022",
+    role: "Mobile Expert",
+    org: "Boost Mobile",
+    body:
+      "Provided technical support and mobile device troubleshooting while helping customers navigate digital products and services.",
+    bullets: [
+      "Diagnosed hardware and software issues across mobile devices.",
+      "Configured devices, accounts, and mobile applications.",
+      "Delivered customer-facing technical support and product guidance.",
+    ],
+    tags: ["Mobile Tech", "Tech Support", "Troubleshooting", "Customer Support"],
+  },
+  {
+    period: "2023 — Present",
+    role: "Independent Software & Data Projects",
+    org: "Self-Directed Development",
+    body:
+      "Built full-stack, analytics, and AI-integrated applications focused on workflow systems, operational tooling, and data-driven decision making.",
+    bullets: [
+      "Developed AI-powered and full-stack applications using React, Node.js, and APIs.",
+      "Built workflow analysis, ETL, and reporting projects using SQL, Python, and Power BI.",
+      "Designed systems focused on operational efficiency, analytics, and scalable workflows.",
+    ],
+    tags: ["Full-Stack", "AI Integration", "Analytics", "Workflow Systems"],
+  },
+  {
+    period: "2020 — 2026",
     role: "B.S. Computer Information Systems",
     org: "Florida A&M University",
     body:
-      "Coursework spanning systems analysis, database design, software engineering, and networks — directly aligned with how I now think about workflow systems and applied software.",
+      "Built a foundation in systems analysis, databases, software development, networking, and applied business technology.",
     bullets: [
-      "Systems Analysis & Design · Database Management (SQL).",
-      "Software Engineering · Object-Oriented Programming (Java).",
-      "Networking · Information Systems Architecture.",
+      "Studied systems analysis, database management, and software development.",
+      "Built technical projects connecting analytics, workflows, and operational systems.",
+      "Developed applied knowledge in networking, programming, and enterprise systems.",
     ],
-    tags: ["CIS", "Systems Analysis", "Databases", "Software Eng."],
+    tags: ["CIS", "Systems Analysis", "Databases", "Software Development"],
   },
 ];
 
 export function Experience() {
+  const [current, setCurrent] = useState(0);
+  const item = timeline[current];
+
+  const next = () => {
+    setCurrent((prev) => (prev + 1) % timeline.length);
+  };
+
+  const prev = () => {
+    setCurrent((prev) => (prev - 1 + timeline.length) % timeline.length);
+  };
+
   return (
     <Section
       id="experience"
       eyebrow="Experience"
-      title={<>A path through <span className="text-gradient italic">systems and software.</span></>}
+      title={
+        <>
+          A path through{" "}
+          <span className="text-gradient italic">systems and software.</span>
+        </>
+      }
       description="The same instincts that run a regulated compliance workflow show up in how I architect software — workflow first, audit by default, operators as users."
     >
-      <div className="relative max-w-5xl">
-        <div className="absolute left-3 md:left-1/2 top-2 bottom-2 w-px bg-gradient-to-b from-primary/40 via-border to-transparent" />
-        <div className="space-y-14">
-          {timeline.map((t, i) => (
-            <motion.div
-              key={t.role}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-12"
-            >
-              <div className="absolute left-2 md:left-1/2 top-2 -translate-x-1/2 h-3 w-3 rounded-full bg-primary shadow-amber" />
+      <div className="relative max-w-5xl mx-auto">
+        <div className="flex items-center justify-between gap-4 mb-6">
+          <button
+            onClick={prev}
+            className="h-11 w-11 rounded-full border border-border bg-background/60 text-primary hover:bg-primary hover:text-background transition-all duration-300"
+          >
+            ←
+          </button>
 
-              <div className={i % 2 === 0 ? "md:text-right md:pr-12" : "md:order-2 md:pl-12"}>
-                <div className="font-mono text-xs uppercase tracking-wider text-primary mb-2">
-                  {t.period}
+          <div className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
+            {current + 1} / {timeline.length}
+          </div>
+
+          <button
+            onClick={next}
+            className="h-11 w-11 rounded-full border border-border bg-background/60 text-primary hover:bg-primary hover:text-background transition-all duration-300"
+          >
+            →
+          </button>
+        </div>
+
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={item.role}
+            initial={{ opacity: 0, x: 80, scale: 0.96 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            exit={{ opacity: 0, x: -80, scale: 0.96 }}
+            transition={{ duration: 0.45, ease: "easeOut" }}
+            className="rounded-[2rem] border border-border bg-card/60 backdrop-blur-sm p-6 md:p-10 shadow-amber"
+          >
+            <div className="grid md:grid-cols-[0.8fr_1.2fr] gap-8 items-start">
+              <div>
+                <div className="font-mono text-xs uppercase tracking-wider text-primary mb-3">
+                  {item.period}
                 </div>
-                <div className="font-display text-2xl md:text-3xl leading-tight">{t.role}</div>
-                <div className="text-muted-foreground text-sm mt-1">{t.org}</div>
+
+                <h3 className="font-display text-3xl md:text-5xl leading-tight mb-3">
+                  {item.role}
+                </h3>
+
+                <p className="text-muted-foreground text-sm md:text-base">
+                  {item.org}
+                </p>
               </div>
 
-              <div className={i % 2 === 0 ? "md:pl-12 mt-3 md:mt-0" : "md:pr-12 md:text-right mt-3 md:mt-0"}>
-                <p className="text-foreground/80 leading-relaxed mb-4">{t.body}</p>
-                <ul className={`space-y-1.5 mb-4 ${i % 2 === 0 ? "" : "md:text-left"}`}>
-                  {t.bullets.map((b) => (
-                    <li key={b} className="flex gap-2 text-sm text-foreground/75">
-                      <span className="mt-2 h-1 w-1 rounded-full bg-primary shrink-0" />
-                      <span>{b}</span>
+              <div>
+                <p className="text-foreground/80 leading-relaxed mb-5">
+                  {item.body}
+                </p>
+
+                <ul className="space-y-3 mb-6">
+                  {item.bullets.map((bullet) => (
+                    <li
+                      key={bullet}
+                      className="flex gap-3 text-sm md:text-base text-foreground/75"
+                    >
+                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                      <span>{bullet}</span>
                     </li>
                   ))}
                 </ul>
-                <div className={`flex flex-wrap gap-2 ${i % 2 === 0 ? "" : "md:justify-end"}`}>
-                  {t.tags.map((tag) => (
+
+                <div className="flex flex-wrap gap-2">
+                  {item.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="font-mono text-[10px] uppercase tracking-wider rounded-full border border-border px-2.5 py-1 text-muted-foreground"
+                      className="font-mono text-[10px] uppercase tracking-wider rounded-full border border-border px-3 py-1.5 text-muted-foreground"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+
+        <div className="flex justify-center gap-2 mt-6">
+          {timeline.map((t, index) => (
+            <button
+              key={t.role}
+              onClick={() => setCurrent(index)}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                index === current
+                  ? "w-8 bg-primary"
+                  : "w-2 bg-muted-foreground/30 hover:bg-primary/60"
+              }`}
+            />
           ))}
         </div>
       </div>
