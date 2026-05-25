@@ -135,10 +135,10 @@ export function Contact() {
 
           <div className="glass rounded-2xl p-2">
             {[
-              { icon: Mail, label: "Email", value: "hello@shannonholmes.dev", href: "mailto:hello@shannonholmes.dev" },
-              { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/shannonholmes", href: "https://linkedin.com" },
-              { icon: Github, label: "GitHub", value: "@shannonholmes", href: "https://github.com" },
-              { icon: FileText, label: "Resume", value: "Download PDF", href: "/resume.pdf" },
+              { icon: Mail, label: "Email", value: "shannonmaholmes@gmail.com", href: "mailto:shannonmaholmes@gmail.com" },
+              { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/shannon-holmes", href: "https://linkedin.com/in/shannon-holmes-" },
+              { icon: Github, label: "GitHub", value: "@sholmes8", href: "https://github.com/sholmes8" },
+              { icon: FileText, label: "Resume", value: "Download PDF", href: "public/ShannonHolmes-Resume.pdf" },
             ].map((c) => (
               <a
                 key={c.label}

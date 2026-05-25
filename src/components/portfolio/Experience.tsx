@@ -4,56 +4,92 @@ import { Section } from "./Section";
 
 const timeline = [
   {
-    period: "Oct' 2025 — Present",
-    role: "Operations & Workflow Coordinator",
+    period: "Oct 2025 — Present",
+    role: "Fulfillment Specialist",
     org: "Cogency Global Inc. · Enterprise Compliance Services",
-    body:
-      "Embedded inside a high-volume, regulated corporate compliance environment supporting filings, workflow coordination, and regulated business operations.",
+    body: "Drive operational accuracy across regulated corporate filing workflows, compliance processing, and structured business documentation systems.",
     bullets: [
-      "Manage high-volume document and compliance workflows across multiple jurisdictions.",
-      "Validate structured filing data and identify operational discrepancies through data analysis and cross-team coordination.",
-      "Operate inside the kind of regulated, auditable environment SaaS workflow tools serve.",
+      "Process high-volume corporate filings and compliance records while maintaining strict data accuracy standards.",
+      "Identify filing inconsistencies and workflow bottlenecks across multi-step operational processes.",
+      "Analyze workflow trends and operational discrepancies to improve reporting visibility and processing efficiency.",
     ],
-    tags: ["Workflow Systems", "Compliance Ops", "Process Analysis", "Operations"],
+    tags: ["Compliance", "Workflow Operations", "Structured Data", "Process Improvement"],
   },
   {
-    period: "Apr' 2025 — Dec' 2025",
+    period: "Apr 2025 — Dec 2025",
     role: "Front Desk Associate",
-    org: "Reston Radiology Consultants · Medical Imaging",
-    body:
-      "Supported healthcare workflow operations through EMR systems, scheduling coordination, insurance validation, and patient data management.",
+    org: "Reston Radiology Consultants · Healthcare Operations",
+    body: "Managed patient workflow coordination, healthcare records, and EMR-driven front-office operations in a fast-paced clinical environment.",
     bullets: [
-      "Maintained secure patient scheduling and healthcare documentation workflows.",
-      "Verified insurance and managed EMR-based patient data with a focus on accuracy and compliance.",
-      "Improved operational efficiency through organized clinical coordination.",
+      "Coordinated patient scheduling, EMR documentation, and healthcare data entry across daily operations.",
+      "Maintained secure insurance and patient records with strong attention to compliance and accuracy.",
+      "Improved workflow organization through structured documentation management and operational support.",
     ],
-    tags: ["Healthcare Systems", "EMR", "Workflow Ops", "Data Accuracy"],
+    tags: ["Healthcare Systems", "EMR", "Scheduling", "Records Management"],
   },
+
+  {
+    period: "Jun 2024 – Dec 2024",
+    role: "IT Assistant",
+    org: "Florida State University · Information Technology Services",
+    body: "Delivered technical support and workstation troubleshooting across university systems, software environments, and end-user operations.",
+    bullets: [
+      "Resolved hardware, software, and workstation issues for students, faculty, and staff in a high-volume IT environment.",
+      "Configured desktops, peripherals, and software applications to improve system reliability and usability.",
+      "Documented troubleshooting procedures and ticket resolutions to streamline future technical support workflows.",
+    ],
+    tags: ["IT Support", "Troubleshooting", "System Configuration", "End-User Support"],
+  },
+
+  {
+    period: "May 2024 – Nov 2024",
+    role: "Customer Service & Compliance Analyst",
+    org: "Delvepoint / IRB Search · Compliance & Verification Operations",
+    body: "Performed structured compliance analysis, operational reporting, and large-scale data validation within regulated verification workflows.",
+    bullets: [
+      "Validated and analyzed compliance data across 700+ client records while maintaining reporting accuracy.",
+      "Improved workflow efficiency through automated validation and integrity-checking processes.",
+      "Generated operational reports and resolved compliance-related workflow discrepancies.",
+    ],
+    tags: ["Compliance Analytics", "Structured Data", "Reporting", "Workflow Analysis"],
+  },
+
+  {
+    period: "Jun 2020 – May 2024",
+    role: "Healthcare & Data Operations Specialist",
+    org: "Heritage Family Practice · Healthcare Information Systems",
+    body: "Oversaw healthcare workflow operations, EMR data management, scheduling coordination, and patient information systems.",
+    bullets: [
+      "Managed and migrated 2,000+ patient records within NextGen EMR systems while ensuring HIPAA compliance.",
+      "Optimized scheduling, insurance verification, and workflow operations for 50+ daily patients.",
+      "Reduced documentation errors through structured data validation and operational process improvements.",
+    ],
+    tags: ["EMR", "Healthcare Data", "HIPAA", "Workflow Operations"],
+  },
+
   {
     period: "May 2022 — Sep 2022",
     role: "Customer Service Representative",
-    org: "Avis Budget Group",
-    body:
-      "Supported customer operations using enterprise reservation systems, workflow coordination, and service-focused problem solving.",
+    org: "Avis / Budget Group, Inc. · Customer Operations",
+    body: "Handled enterprise reservation systems, customer database operations, and service coordination within a high-volume transportation environment.",
     bullets: [
-      "Operated reservation and customer database systems in a fast-paced environment.",
-      "Maintained accurate customer records and transaction workflows.",
-      "Resolved operational and customer service issues efficiently.",
+      "Operated enterprise reservation and customer management systems to support daily business operations.",
+      "Maintained accurate customer records while resolving service and scheduling issues efficiently.",
+      "Delivered operational and customer support within a fast-paced service environment.",
     ],
-    tags: ["Operations", "Customer Systems", "Workflow", "Service"],
+    tags: ["Customer Systems", "Databases", "Operations", "Service Support"],
   },
   {
     period: "Jan 2021 — May 2022",
     role: "Mobile Expert",
-    org: "Boost Mobile",
-    body:
-      "Provided technical support and mobile device troubleshooting while helping customers navigate digital products and services.",
+    org: "Boost Mobile · Consumer Technology Support",
+    body: "Provided technical troubleshooting, mobile device configuration, and customer-facing technology support services.",
     bullets: [
-      "Diagnosed hardware and software issues across mobile devices.",
-      "Configured devices, accounts, and mobile applications.",
-      "Delivered customer-facing technical support and product guidance.",
+      "Diagnosed and resolved mobile hardware, software, and connectivity issues for customers.",
+      "Configured smartphones, applications, and account settings to improve usability and device performance.",
+      "Delivered technical assistance and product support across mobile services and consumer technology systems.",
     ],
-    tags: ["Mobile Tech", "Tech Support", "Troubleshooting", "Customer Support"],
+    tags: ["Mobile Tech", "Technical Support", "Troubleshooting", "Device Configuration"],
   },
   {
     period: "2023 — Present",

@@ -52,7 +52,7 @@ export function About() {
             <FileText className="h-4 w-4" /> Preview Resume
           </button>
           <a
-            href="/resume.pdf"
+            href="public/ShannonHolmes-Resume.pdf"
             download
             className="inline-flex items-center gap-2 rounded-full glass px-5 py-3 text-sm font-medium hover:bg-white/5 transition-all"
           >
@@ -189,7 +189,7 @@ export function About() {
             >
               <X className="h-4 w-4" />
             </button>
-            <div className="font-mono text-xs text-primary mb-2">/resume.pdf · preview</div>
+            <div className="font-mono text-xs text-primary mb-2">public/ShannonHolmes-Resume.pdf · preview</div>
             <h3 className="font-display text-4xl mb-1">Shannon Holmes</h3>
             <p className="text-sm text-muted-foreground mb-6">
               Software Engineer · Full-Stack Developer · hello@shannonholmes.dev
