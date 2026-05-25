@@ -18,16 +18,14 @@ const education = {
 
 const certifications = [
   "Google Data Analytics Professional Certificate",
-  "Microsoft Power BI — Data Visualization",
-  "OpenAI API & Prompt Engineering",
 ];
 
 const skillsByCategory = {
-  Languages: ["JavaScript", "TypeScript", "Python", "SQL"],
-  Frontend: ["React", "Vite", "Tailwind"],
-  Backend: ["Node.js", "Express", "REST APIs"],
-  Data: ["Power BI", "PostgreSQL", "Excel"],
-  "AI & Deployment": ["OpenAI API", "Vercel", "Render", "GitHub"],
+  Languages: ["JavaScript", "TypeScript", "Python", "Java", "SQL"],
+  Frontend: ["HTML", "CSS", "React", "Vite", "Tailwind", "Figma", "Responsive UI"],
+  Backend: ["Node.js", "Express", "REST APIs", "Firebase", "SaaS Integrations"],
+  Data: ["Excel", "MySQL", "PostgreSQL", "Tableau", "Power BI", "Data Visualization"],
+  "AI & Deployment": ["OpenAI API", "Git", "GitHub", "Vercel", "Render", "Cloudflare", "Workflow Automation"],
 };
 
 export function About() {
@@ -52,7 +50,7 @@ export function About() {
             <FileText className="h-4 w-4" /> Preview Resume
           </button>
           <a
-            href="public/ShannonHolmes-Resume.pdf"
+            href="/ShannonHolmes-Resume.pdf"
             download
             className="inline-flex items-center gap-2 rounded-full glass px-5 py-3 text-sm font-medium hover:bg-white/5 transition-all"
           >

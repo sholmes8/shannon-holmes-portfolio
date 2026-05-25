@@ -138,7 +138,7 @@ export function Contact() {
               { icon: Mail, label: "Email", value: "shannonmaholmes@gmail.com", href: "mailto:shannonmaholmes@gmail.com" },
               { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/shannon-holmes", href: "https://linkedin.com/in/shannon-holmes-" },
               { icon: Github, label: "GitHub", value: "@sholmes8", href: "https://github.com/sholmes8" },
-              { icon: FileText, label: "Resume", value: "Download PDF", href: "public/ShannonHolmes-Resume.pdf" },
+              { icon: FileText, label: "Resume", value: "Download PDF", href: "/ShannonHolmes-Resume.pdf" },
             ].map((c) => (
               <a
                 key={c.label}

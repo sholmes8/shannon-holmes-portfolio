@@ -96,13 +96,14 @@ export function Hero() {
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
             <a
-              href="#"
+              href="/ShannonHolmes-Resume.pdf"
+              download
               className="inline-flex items-center gap-2 rounded-full glass px-6 py-3 text-sm font-medium hover:bg-white/5 transition-all"
             >
               <Download className="h-4 w-4" /> Resume
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/sholmes8"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium hover:border-primary/40 transition-all"
@@ -110,7 +111,7 @@ export function Hero() {
               <Github className="h-4 w-4" /> GitHub
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/shannon-holmes-"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium hover:border-primary/40 transition-all"
