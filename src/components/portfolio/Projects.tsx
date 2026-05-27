@@ -53,8 +53,8 @@ const projects: Project[] = [
     ],
     image: stylz,
     links: [
-      { label: "Live Demo", href: "#", type: "demo" },
-      { label: "GitHub", href: "#", type: "github" },
+      { label: "Live Demo", href: "https://stylz-career-ai.vercel.app", type: "demo" },
+      { label: "GitHub", href: "https://github.com/sholmes8/stylz-career-ai", type: "github" },
     ],
   },
   {
@@ -86,7 +86,7 @@ const projects: Project[] = [
     image: filing,
     links: [
       { label: "Case Study", href: "#", type: "case" },
-      { label: "GitHub", href: "#", type: "github" },
+      { label: "GitHub", href: "https://github.com/sholmes8/business-filing-processor", type: "github" },
     ],
   },
   {
@@ -118,7 +118,7 @@ const projects: Project[] = [
     image: ehr,
     links: [
       { label: "Case Study", href: "#", type: "case" },
-      { label: "GitHub", href: "#", type: "github" },
+      { label: "GitHub", href: "https://github.com/sholmes8/ehr-data-migration-project", type: "github" },
     ],
   },
   {
@@ -150,7 +150,7 @@ const projects: Project[] = [
     image: stemsync,
     links: [
       { label: "Live Demo", href: "#", type: "demo" },
-      { label: "GitHub", href: "#", type: "github" },
+      { label: "GitHub Coming Soon", href: "#", type: "disabled" },
     ],
   },
 ];

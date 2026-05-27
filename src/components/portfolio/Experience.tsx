@@ -105,7 +105,7 @@ const timeline = [
     tags: ["Full-Stack", "AI Integration", "Analytics", "Workflow Systems"],
   },
   {
-    period: "2020 — 2026",
+    period: "2021 — 2026",
     role: "B.S. Computer Information Systems",
     org: "Florida A&M University",
     body:
